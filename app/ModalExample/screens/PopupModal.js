@@ -19,7 +19,7 @@ export default class PopupModal extends Component {
                 </View>
                 <Modal
 
-                    animationType="fade"
+                    animationType="none"
                     transparent={true}
                     visible={this.state.modalVisible}
                     onRequestClose={() => {

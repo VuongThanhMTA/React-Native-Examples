@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Modal } from 'react-native';
-import AppStyles from '../theme';
+import AppStyles from '../../theme';
 
 
 
