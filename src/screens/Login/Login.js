@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
 
-export default class Home extends Component {
+export default class Login extends Component {
   constructor(props) {
     super.props;
   }
