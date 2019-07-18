@@ -3,14 +3,12 @@ import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
 
 export default class Register extends Component {
-  constructor(props) {
-    super.props;
-  }
+
   state = {}
   render() {
     return (
       <View style={styles.container}>
-        <Text> Home </Text>
+        <Text> Sign Up </Text>
       </View>
     );
   }

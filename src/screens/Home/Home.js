@@ -1,20 +1,36 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { connect } from 'react-redux'
 
 
-export default class Home extends Component {
-  constructor(props) {
-    super.props;
+
+class Home extends Component {
+
+  onHomePress = () => {
+    this.props.navigation.navigate('HomeScreen')
   }
-  state = {}
+
   render() {
     return (
       <View style={styles.container}>
-        <Text> Home </Text>
+
+        <Text> {this.props.userName} </Text>
+        <Text> {this.props.password} </Text>
+        <Text> {this.props.email} </Text>
+        <TouchableOpacity>
+          <Text> Log Out </Text>
+        </TouchableOpacity>
       </View>
     );
   }
 }
+const mapStateToProps = state => ({
+  userName: state.user.userName,
+  password: state.user.password,
+  email: state.user.email
+});
+
+export default connect(mapStateToProps)(Home);
 
 const styles = StyleSheet.create({
   container: {

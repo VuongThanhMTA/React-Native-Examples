@@ -1,4 +1,4 @@
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { Animated, Easing, Platform } from 'react-native';
 
 import WelcomeScreen from './screens/Wellcome';
@@ -33,8 +33,7 @@ const transitionConfig = () => {
     },
   };
 };
-
-export default createStackNavigator({
+const Routes = createStackNavigator({
   WelcomeScreen,
   LoginScreen,
   SignUpScreen,
@@ -44,3 +43,5 @@ export default createStackNavigator({
     initialRouteName: 'WelcomeScreen',
     transitionConfig: Platform.OS === 'android' ? transitionConfig : null
   });
+
+export default createAppContainer(Routes);

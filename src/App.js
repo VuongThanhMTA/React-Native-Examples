@@ -1,5 +1,6 @@
-import store, { AppWithNavigationState } from '@gl/store';
-import { connect, Provider } from 'react-redux'
+import store from '@gl/store';
+import { connect, Provider } from 'react-redux';
+import Routes from './Routes'
 
 
 import React, { Component } from 'react';
@@ -10,7 +11,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <AppWithNavigationState />
+        <Routes />
       </Provider>
     );
   }
